@@ -7,6 +7,8 @@ const Context = ({children}) => {
 
     const [chars, setChars] = useState([])
 
+    const [favs, setFavs] = useState([])
+
     const url = 'https://jsonplaceholder.typicode.com/users'
 
     useEffect(()=>{
@@ -18,7 +20,7 @@ const Context = ({children}) => {
     }, [])
 
     return(
-        <CharStates.Provider value={{chars}}>
+        <CharStates.Provider value={{chars, favs, setFavs}}>
             {children}
         </CharStates.Provider>
 

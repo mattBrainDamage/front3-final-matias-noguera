@@ -19,6 +19,7 @@ const Card = ({char}) => {
          <h4>{char.email}</h4>
          <h4>{char.phone}</h4>
         </Link>
+        <button onClick = {()=>{}}>⭐</button>
 
     </div>
   )
