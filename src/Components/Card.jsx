@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from  'react-router-dom'
+import { useCharStates } from '../Context/Context'
 
 
 
@@ -12,6 +13,13 @@ Cada card renderizada en la ruta /home debe ser un link hacia esta dirección.
 
 const Card = ({char}) => {
 
+
+  const {dispatch} = useCharStates()
+
+  const AddFav = () => {
+    dispatch({type: 'ADD_FAV', payload: char})
+  }
+
   return (
     <div>
         <Link to = {`/detail/${char.id} `}>
@@ -19,7 +27,7 @@ const Card = ({char}) => {
          <h4>{char.email}</h4>
          <h4>{char.phone}</h4>
         </Link>
-        <button onClick = {()=>{}}>⭐</button>
+        <button onClick = {AddFav}>⭐</button>
 
     </div>
   )

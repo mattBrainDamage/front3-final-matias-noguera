@@ -10,11 +10,11 @@ Donde tendrán que renderizar una card por cada dentista devuelto por la API.
 
 const Home = () => {
 
-    const {chars} = useCharStates()
+    const {state} = useCharStates()
 
     return (
       <div>
-          {chars.map(char => <Card char={char} key={char.id} />)}
+          {state.chars.map(char => <Card char={char} key={char.id} />)}
       </div>
     )
    
