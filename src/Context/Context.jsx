@@ -10,6 +10,9 @@ const reducer = (state, action) => {
            return {...state, chars: action.payload }
         case "ADD_FAV":
             return {...state, favs: [...state.favs, action.payload]}   
+
+        case 'SWITCH_THEME'  :  
+             return { ...state, theme: state.theme === "lightTheme" ? "darkTheme" : "lightTheme"} 
         default: 
            throw new Error()
       }
@@ -24,8 +27,9 @@ const initialFavState = localFavs ? localFavs : []
 
 const initialState = {
     chars: [],
+    detail: [],
     favs: initialFavState,
-    theme: true
+    theme: 'lightTheme'
   }
 
 
@@ -34,9 +38,6 @@ const Context = ({children}) => {
 
     const [state, dispatch] = useReducer(reducer, initialState)
 
-    // const [chars, setChars] = useState([])
-
-    //const [favs, setFavs] = useState(initialFavState)
 
     const [theme, setTheme] = useState(true)
 
@@ -60,10 +61,18 @@ const Context = ({children}) => {
         localStorage.setItem('favs', JSON.stringify(state.favs))
     },[state.favs])
 
+    const [user, setUser] = useState({
+        fullname: " ",
+        email: " ",
+      })
+      // Estados para el form
+      const [show, setShow] = useState(false)
+      const [error, setError] = useState(false)
+
 
 
     return(
-        <CharStates.Provider value={{dispatch, state}}>
+        <CharStates.Provider value={{dispatch, state, user, setUser, show, setShow, error, setError}}>
             {children}
         </CharStates.Provider>
 

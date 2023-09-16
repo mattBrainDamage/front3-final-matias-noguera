@@ -1,0 +1,31 @@
+.navbar {
+  position: absolute; /* Fija la barra de navegación en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0077b6; /* Color de fondo azul oscuro */
+  color: #fff; /* Color de texto blanco */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  margin: 0 20px;
+  transition: color 0.3s ease; /* Transición de color suave */
+}
+
+.navbar a:hover {
+  color: #f9a826; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Estilos para resaltar el enlace activo */
+.navbar a.active {
+  font-weight: bold;
+  color: #f9a826; /* Color de texto resaltado */
+}

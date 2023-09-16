@@ -25,8 +25,14 @@ const Detail = () => {
   return (
     <div>
       { loading ? 'Cargando...' : <>
-      <h1>{char.name}</h1>
-      <h2>{`Ciudad:  ${char.address.city}`}</h2> 
+        <img src='../../public/dentista.jpg'  alt="doctor" />
+        <h4>Id: {char.id}</h4>
+        <h1>Nombre: {char.name}</h1>
+        <h2>{`Ciudad:  ${char.address.city}`}</h2> 
+        <h3>Nombre:{char.name}</h3>
+
+        <h4>E-mail: {char.email}</h4>
+        <h4>Tel: {char.phone}</h4>
       </>}
     </div> 
   )

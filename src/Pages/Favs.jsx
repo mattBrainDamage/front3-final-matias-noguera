@@ -5,10 +5,16 @@ import { useCharStates } from '../Context/Context'
 
 const Favs = () => {
 
-    const {state} = useCharStates()
+    const {state, dispatch} = useCharStates()
+
+
+    const themeClass = state.theme;
 
   return (
-    <div>{state.favs.map(fav=> <Card char={fav} key={fav.id}/>)}</div>
+    <main className={themeClass} >
+      <div>{state.favs.map(fav=> <Card char={fav} key={fav.id}/>)}</div>        
+    </main>
+
   )
 }
 
