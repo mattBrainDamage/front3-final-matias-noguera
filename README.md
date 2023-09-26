@@ -1,1 +1,1 @@
-Final Front 3 Matías Noguera
+Final Front 3 Matías Noguera. Proyecto realizado en React.
