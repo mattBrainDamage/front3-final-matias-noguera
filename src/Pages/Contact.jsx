@@ -9,11 +9,13 @@ const Contact = () => {
 
 
   return (
-    <div className={themeClass}>
-    <div className='contact'>
-      <p>Para consultas complete el formulario</p>
-      <Form/>
-    </div>
+    <div className={`container ${themeClass}`}>
+      <div className='contact'>
+        <div className='centered-content'>
+          <p>Para consultas complete el formulario</p>
+          <Form />
+        </div>
+      </div>
     </div>
   )
 }

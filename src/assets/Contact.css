@@ -1,4 +1,12 @@
-.contact{
-    max-width: 400px;
-    margin: 0 auto;
-}
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos toda la altura de la pantalla */
+    width: max-content;
+  }
+  
+  /* Estilos para el contenido centrado */
+  .centered-content {
+    text-align: center; /* Centra el contenido horizontalmente dentro del div */
+  }
