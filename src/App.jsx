@@ -11,6 +11,7 @@ import Footer from './Components/Footer';
 import Contact from './Pages/Contact'
 import TailwindPage from './Pages/TaillwindPage'
 import TailwindLogin from './Pages/TailwindLogin'
+import Modal from './Pages/Modal'
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
           <Route path='/favs' element={<Favs/>}/> 
           <Route path='/Contact' element= {<Contact/>}/> 
           <Route path='/tail' element= {<TailwindPage/>}/> 
-          <Route path='/login' element= {<TailwindLogin/>}/>      
+          <Route path='/login' element= {<TailwindLogin/>}/> 
+          <Route path='/modal' element= {<Modal/>}/> 
       </Routes>
     </>
   )
